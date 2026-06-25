@@ -1,28 +1,30 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#benefits", label: "Benefits" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#features", label: "Features" },
+  { href: "#integrations", label: "Integrations" },
   { href: "#pricing", label: "Pricing" },
-  { href: "#faqs", label: "FAQs" },
-  { href: "#blog", label: "Blog" },
-  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--brand-teal)]/15 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
+        <Link href="/" className="flex min-w-fit items-center gap-3">
           <Image
             src="/assets/yaita-favicon.png"
-            alt="Yaita"
+            alt="Yaita Fulfillment"
             width={33}
             height={60}
-            className="h-11 w-auto"
+            className="h-10 w-auto"
+            priority
           />
-          <span className="text-2xl font-black text-slate-950">Yaita</span>
+          <span className="text-lg font-black uppercase text-slate-950 sm:text-xl">
+            Yaita Fulfillment
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -40,15 +42,15 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href="https://merchant.yaita.co.zw"
-            className="hidden text-sm font-bold text-slate-700 transition hover:text-[var(--brand-teal)] sm:inline-flex"
+            className="hidden rounded-lg border border-slate-300 px-4 py-2 text-sm font-black text-slate-800 transition hover:border-[var(--brand-teal)] hover:text-[var(--brand-teal)] sm:inline-flex"
           >
-            Sign in
+            Log In
           </a>
           <a
-            href="https://merchant.yaita.co.zw"
+            href="#contact"
             className="inline-flex rounded-lg bg-[var(--brand-yellow)] px-4 py-2 text-sm font-black text-[var(--brand-teal-deep)] transition hover:bg-[var(--brand-teal-dark)] hover:text-white"
           >
-            Sign up
+            Outsource Your Operations
           </a>
         </div>
       </div>

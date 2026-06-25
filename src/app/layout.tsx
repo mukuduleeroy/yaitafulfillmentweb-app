@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yaita - Logistics and Fulfillment",
+  title: "Yaita Fulfillment - E-Commerce Operations in Zimbabwe",
   description:
-    "Dedicated delivery drivers, AI smart routing, and secure wallet payments for e-commerce fulfillment.",
+    "Full-stack e-commerce fulfillment for Zimbabwean brands, from lead confirmation and warehousing to delivery, COD collection, and merchant remittance.",
   icons: {
     icon: "/assets/yaita-favicon.png",
     shortcut: "/assets/yaita-favicon.png",
