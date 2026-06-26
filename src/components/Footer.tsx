@@ -22,18 +22,13 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1.4fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-12 w-10 items-center justify-center rounded-lg bg-white">
-                <Image
-                  src="/assets/yaita-favicon.png"
-                  alt="Yaita Fulfillment"
-                  width={33}
-                  height={60}
-                  className="h-10 w-auto"
-                />
-              </span>
-              <span className="text-2xl font-black uppercase">
-                Yaita Fulfillment
-              </span>
+              <Image
+                src="/assets/Wordmark - Inverted.webp"
+                alt="Yaita Fulfillment"
+                width={220}
+                height={68}
+                className="h-12 w-auto"
+              />
             </div>
             <p className="mt-5 max-w-md leading-7 text-slate-300">
               Full-stack e-commerce fulfillment for Zimbabwean brands ready to

@@ -15,16 +15,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
         <Link href="/" className="flex min-w-fit items-center gap-3">
           <Image
-            src="/assets/yaita-favicon.png"
+            src="/assets/logo.webp"
             alt="Yaita Fulfillment"
-            width={33}
-            height={60}
-            className="h-10 w-auto"
+            width={180}
+            height={56}
+            className="h-11 w-auto"
             priority
           />
-          <span className="text-lg font-black uppercase text-slate-950 sm:text-xl">
-            Yaita Fulfillment
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
