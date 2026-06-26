@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { integrations } from "@/data/home";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -17,7 +18,23 @@ export function Integrations() {
               key={integration.name}
               className="rounded-lg border border-slate-200 bg-slate-50 p-6"
             >
-              <span className="mb-5 block h-1.5 w-16 rounded-full bg-[var(--brand-yellow)]" />
+              <div className="mb-6 flex min-h-16 items-center gap-3">
+                {integration.logos.map((logo) => (
+                  <span
+                    key={logo.name}
+                    className="flex h-14 min-w-14 items-center justify-center rounded-lg border border-slate-200 bg-white px-3"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={`${logo.name} logo`}
+                      width={logo.width}
+                      height={logo.height}
+                      unoptimized={logo.src.endsWith(".svg")}
+                      className="max-h-9 w-auto max-w-24 object-contain"
+                    />
+                  </span>
+                ))}
+              </div>
               <h3 className="text-xl font-black text-slate-950">
                 {integration.name}
               </h3>

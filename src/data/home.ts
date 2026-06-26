@@ -1,39 +1,65 @@
 import type { Integration, Partner, PipelineStep, Spotlight } from "@/types";
 
 export const partners: Partner[] = [
-  "Mbare Market Co.",
-  "GlowCart",
-  "Harare Gadgets",
-  "ZimBeauty",
-  "Urban Threads",
-  "HomeBox ZW",
+  {
+    name: "TillPoint",
+    logo: "/assets/partner-logos/tillpoint.png",
+    width: 512,
+    height: 512,
+  },
+  {
+    name: "TV Sales & Home",
+    logo: "/assets/partner-logos/tv-sales-home.png",
+    width: 512,
+    height: 512,
+  },
+  {
+    name: "Ownai Marketplace",
+    logo: "/assets/partner-logos/ownai.png",
+    width: 194,
+    height: 48,
+  },
+  {
+    name: "Econet Wireless",
+    logo: "/assets/partner-logos/econet.png",
+    width: 195,
+    height: 43,
+  },
+  {
+    name: "EcoCash",
+    logo: "/assets/partner-logos/ecocash.png",
+    width: 1471,
+    height: 420,
+  },
+  {
+    name: "Vaya",
+    logo: "/assets/partner-logos/vaya.png",
+    width: 1471,
+    height: 420,
+  },
 ];
 
 export const pipelineSteps: PipelineStep[] = [
   {
     step: "01",
-    icon: "LI",
     title: "Lead Ingestion & Integration",
     detail:
       'Connect your Google Sheets or store. The second a customer clicks "Order" or submits a lead from your Facebook Ads, our system captures it instantly.',
   },
   {
     step: "02",
-    icon: "CC",
     title: 'The "Always-On" Call Center',
     detail:
       "No more missed sales. Our dedicated tele-sales agents immediately call your leads, confirm the orders, upsell bundles, and lock in the delivery schedule.",
   },
   {
     step: "03",
-    icon: "WH",
     title: "Smart Warehousing & Packing",
     detail:
       'We store your inventory safely. When an order is confirmed, our warehouse team picks and packs it with 99.8% accuracy, easily handling your complex "Buy 2 Get 1 Free" or combo deals.',
   },
   {
     step: "04",
-    icon: "DR",
     title: "Delivery, COD & Remittance",
     detail:
       "Our dedicated fleet completes the last mile. We collect the Cash on Delivery (COD) or EcoCash, reconcile the funds, and settle directly to your merchant wallet.",
@@ -68,17 +94,61 @@ export const integrations: Integration[] = [
   {
     name: "Google Sheets",
     detail: "Instantly pull inbound leads from your social media campaigns.",
+    logos: [
+      {
+        name: "Google Sheets",
+        src: "/assets/integration-logos/google-sheets.png",
+        width: 96,
+        height: 96,
+      },
+    ],
   },
   {
     name: "Shopify & WooCommerce",
     detail: "Sync your online store directly to our warehouse inventory.",
+    logos: [
+      {
+        name: "Shopify",
+        src: "/assets/integration-logos/shopify.svg",
+        width: 64,
+        height: 64,
+      },
+      {
+        name: "WooCommerce",
+        src: "/assets/integration-logos/woocommerce.svg",
+        width: 64,
+        height: 64,
+      },
+    ],
   },
   {
     name: "Facebook / Meta Lead Ads",
     detail: "Route ad clicks directly to our call center agents in real-time.",
+    logos: [
+      {
+        name: "Meta",
+        src: "/assets/integration-logos/meta.svg",
+        width: 64,
+        height: 64,
+      },
+    ],
   },
   {
     name: "EcoCash & Paynow",
     detail: "Seamless digital payment collections at the point of delivery.",
+    logos: [
+      {
+        name: "EcoCash",
+        src: "/assets/integration-logos/ecocash.png",
+        width: 1471,
+        height: 420,
+      },
+      {
+        name: "Paynow",
+        src: "/assets/integration-logos/paynow.svg",
+        width: 300,
+        height: 87,
+      },
+    ],
   },
 ];

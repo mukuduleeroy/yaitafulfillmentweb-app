@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { partners } from "@/data/home";
 
 export function SocialProof() {
@@ -10,10 +11,19 @@ export function SocialProof() {
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
           {partners.map((partner) => (
             <div
-              key={partner}
-              className="flex min-h-20 items-center justify-center rounded-lg border border-slate-200 bg-white px-4 text-center text-sm font-black uppercase tracking-[0.08em] text-slate-700"
+              key={partner.name}
+              className="flex min-h-24 flex-col items-center justify-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-5 text-center"
             >
-              {partner}
+              <Image
+                src={partner.logo}
+                alt={`${partner.name} logo`}
+                width={partner.width}
+                height={partner.height}
+                className="max-h-12 w-auto max-w-[150px] object-contain"
+              />
+              <span className="text-xs font-black uppercase tracking-[0.08em] text-slate-500">
+                {partner.name}
+              </span>
             </div>
           ))}
         </div>
